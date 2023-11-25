@@ -2,7 +2,6 @@ dist/
 build/
 dist-newstyle/
 .stack-work/
-stack.yaml.lock
 cabal-dev
 /cabal.project.local
 .ghc.environment.*
@@ -32,6 +31,8 @@ cabal.config
 *.bin
 *.log
 *.tar.gz
+.updo
+updo
 
 *~
 *.DS_Store
