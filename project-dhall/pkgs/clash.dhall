@@ -1,0 +1,15 @@
+[ "clash-cores"
+, "clash-ffi"
+, "clash-ghc"
+, "clash-lib"
+, "clash-lib-hedgehog"
+, "clash-prelude"
+, "clash-prelude-hedgehog"
+, "tests"
+-- Updo doesn't handle optional-packages
+, "benchmark"
+, "benchmark/profiling/prepare"
+, "benchmark/profiling/run"
+, "clash-cosim"
+, "clash-term"
+]
