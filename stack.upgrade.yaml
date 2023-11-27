@@ -20,7 +20,7 @@ allow-newer-deps:
   - rewrite-inspector
   - tasty-hedgehog
 
-resolver: lts-21.22
+resolver: nightly-2023-11-25
 
 # We have 13 packages.
 packages:
@@ -58,9 +58,11 @@ extra-deps:
   # Package versions for published packages either not on Stackage or
   # not matching the version on Stackage for the resolver we use.
   # These package-version extra dependencies are equivalent to cabal constraints.
+  - ansi-terminal-0.11.5
   - brick-0.50
-  - concurrent-supply-0.1.8
   - derive-storable-plugin-0.2.3.7
-  - prettyprinter-interp-0.2.0.0
+  - hedgehog-1.2
+  - hedgehog-fakedata-0.0.1.5
   - rewrite-inspector-0.1.0.11
   - tasty-1.5
+  - tasty-hedgehog-1.4.0.1
