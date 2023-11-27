@@ -45,14 +45,9 @@ package clash-benchmark
   executable-dynamic: True
 
 allow-newer:
-  brick:base,
-  vector-binary-instances:base,
-  cryptohash-sha256:base,
-  hashable,
-  haskell-src-meta:template-haskell,
-  string-interpolate:template-haskell,
-  string-interpolate:text,
-  tasty-hedgehog:tasty
+    brick:base
+  , rewrite-inspector:hashable
+  , tasty-hedgehog:tasty
 
 -- Works around: https://github.com/recursion-schemes/recursion-schemes/issues/128. This
 -- shouldn't harm (runtime) performance of Clash, as we only use recursion-schemes with
@@ -62,9 +57,6 @@ package recursion-schemes
 
 package regex-tdfa
     optimization: 2
-
--- rewrite-inspector-0.1.0.11 uses brick-0.50 which doesn't compile with vty-6.0
-constraints: vty < 6.0
 
 -- there are no top level packages. any package can be checked out under the
 -- root directory (i.e. patched copies, or forks) and will automatically be
